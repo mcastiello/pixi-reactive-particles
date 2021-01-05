@@ -1,0 +1,1 @@
+export { PixiParticlesProps } from './PixiParticlesProps'
