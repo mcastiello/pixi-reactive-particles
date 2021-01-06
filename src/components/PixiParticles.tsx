@@ -7,7 +7,7 @@ import { PixiParticlesProps } from '../props';
 const PixiParticles: React.FC<PixiParticlesProps> = (props) => {
   const element = useElement(new PIXI.Container());
   const shapeContext = useContext(ShapeTextureContext);
-  const textureContext = useContext(TextureContext);
+  const { textures: textureContext } = useContext(TextureContext);
   const { frameId, elapsed } = useContext(AnimationContext);
   const [loadedTextures, setTexture] = useReducer((textures: PIXI.Texture[], texture: PIXI.Texture) => [...textures, texture], []);
   const [textureList, setTextureList] = useState<PIXI.Texture[]>([]);
