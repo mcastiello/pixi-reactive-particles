@@ -1,10 +1,12 @@
 import { Emitter } from 'pixi-particles';
-import { PixiDisplayObject, AnimationContext, ShapeTextureContext, TextureContext, useElement } from 'pixi-reactive';
+import { PixiDisplayObject, AnimationContext, ShapeTextureContext, TextureContext, useElement, usePropsContext } from 'pixi-reactive';
 import React, { useReducer, useContext, useState, useEffect, Reducer } from 'react';
 import * as PIXI from 'pixi.js';
 import { PixiParticlesProps } from '../props';
+import { PixiParticlesBasicProps } from '../props/PixiParticlesProps';
 
-const PixiParticles: React.FC<PixiParticlesProps> = (props) => {
+const PixiParticles: React.FC<PixiParticlesProps> = ({ children, config, ...props }) => {
+  const { properties } = usePropsContext<PixiParticlesBasicProps>(props);
   const element = useElement(new PIXI.Container());
   const shapeContext = useContext(ShapeTextureContext);
   const { textures: textureContext } = useContext(TextureContext);
@@ -20,7 +22,7 @@ const PixiParticles: React.FC<PixiParticlesProps> = (props) => {
     },
     undefined
   );
-  const { textures, config, emit = true } = props;
+  const { textures, emit = true } = properties;
 
   useEffect(() => {
     const textureIds = textures?.split(/\s+/) || [];
@@ -49,7 +51,7 @@ const PixiParticles: React.FC<PixiParticlesProps> = (props) => {
 
   return (
     <ShapeTextureContext.Provider value={{ ...shapeContext, setTexture }}>
-      <PixiDisplayObject item={element} {...props} />
+      <PixiDisplayObject item={element} {...properties} />
     </ShapeTextureContext.Provider>
   );
 };

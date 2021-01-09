@@ -2153,7 +2153,7 @@
   dependencies:
     "@types/react" "^16"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^17.0.0":
   version "17.0.0"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.0.tgz#5af3eb7fad2807092f0046a1302b7823e27919b8"
   integrity sha512-aj/L7RIMsRlWML3YB6KZiXB3fV2t41+5RBGYF8z+tAKU43Px8C3cYUZsDvf1/+Bm4FK21QWBrDutu8ZJ/70qOw==
@@ -2161,7 +2161,7 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-"@types/react@^16", "@types/react@^16.9.27":
+"@types/react@^16":
   version "16.14.2"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.2.tgz#85dcc0947d0645349923c04ccef6018a1ab7538c"
   integrity sha512-BzzcAlyDxXl2nANlabtT4thtvbbnhee8hMmH/CcJrISDBVcJS1iOsP1f0OAgSdGE0MsY9tqcrb9YoZcOFv9dbQ==
@@ -8855,10 +8855,10 @@ pixi-particles@^4.3.0:
   resolved "https://registry.yarnpkg.com/pixi-particles/-/pixi-particles-4.3.0.tgz#bd27f54c3af480e0cab5ea50573bb06200137a5e"
   integrity sha512-3G66vSFMbp+LnD3P6SYIxOo3f1X3yxkPbP1Tr2o+o18ZkkT6mePpCvsPUrM8s+xCW7oK816/wDYZXMtKzJ61CQ==
 
-pixi-reactive@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/pixi-reactive/-/pixi-reactive-1.3.3.tgz#0e61e94922eb251f86ae5a28b36f21dc43b2ffbd"
-  integrity sha512-1QlxpWIQa+BB/zTcSl7aFoqwIfp96+2cqmK3SsuZ74lPu6tJUkHL9ugHKWGvGNI5MM22RFM4DdopzbJKvIipOA==
+pixi-reactive@^1.3.6:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/pixi-reactive/-/pixi-reactive-1.3.6.tgz#b853d4416f50fcd5902dab517e5680321a7aa720"
+  integrity sha512-qHMn10/y7ca/bmYyRYWw2vMiDEaqdFDH784tUBSXxyfdmqTVVa3y9uCcr7csKtSSb3z1OJEXUOZRzErNK5Q86A==
   dependencies:
     react-virtualized-auto-sizer "^1.0.2"
     uuid "^8.3.1"

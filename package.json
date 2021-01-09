@@ -1,6 +1,6 @@
 {
   "name": "pixi-reactive-particles",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Integrate support for Particle Effects into the pixi-reactive library",
   "author": "mcastiello",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "start": "microbundle-crl watch --no-compress --format modern,cjs"
   },
   "peerDependencies": {
-    "pixi-reactive": "^1.3.3",
+    "pixi-reactive": "^1.3.6",
     "pixi.js": "^5.3.7",
     "react": "^17.0.1"
   },
@@ -26,7 +26,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^25.1.4",
     "@types/node": "^12.12.38",
-    "@types/react": "^16.9.27",
+    "@types/react": "^17.0.0",
     "@types/react-dom": "^16.9.7",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
@@ -51,7 +51,7 @@
     "gh-pages": "^2.2.0",
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
-    "pixi-reactive": "^1.3.3",
+    "pixi-reactive": "^1.3.6",
     "pixi.js": "^5.3.7",
     "prettier": "^2.0.4",
     "react": "^17.0.1",
