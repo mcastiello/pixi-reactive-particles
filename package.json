@@ -56,6 +56,7 @@
     "dist"
   ],
   "dependencies": {
+    "eslint-plugin-flowtype": "^5.2.0",
     "pixi-particles": "^4.3.0"
   }
 }
