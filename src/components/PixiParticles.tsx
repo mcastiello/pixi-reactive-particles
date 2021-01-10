@@ -6,7 +6,8 @@ import {
   TextureContext,
   useElement,
   usePropsContext,
-  PropsContext
+  PropsContext,
+  RenderingContext
 } from 'pixi-reactive';
 import React, { useReducer, useContext, useState, useEffect, Reducer } from 'react';
 import * as PIXI from 'pixi.js';
@@ -20,6 +21,7 @@ const PixiParticles: React.FC<PixiParticlesProps> = ({ children, config, ...prop
   const shapeContext = useContext(ShapeTextureContext);
   const { textures: textureContext } = useContext(TextureContext);
   const { frameId, elapsed } = useContext(AnimationContext);
+  const { update } = useContext(RenderingContext);
   const [loadedTextures, setTexture] = useReducer((textures: PIXI.Texture[], texture: PIXI.Texture) => [...textures, texture], []);
   const [textureList, setTextureList] = useState<PIXI.Texture[]>([]);
   const [emitter, setEmitter] = useReducer<Reducer<Emitter | undefined, Emitter>>(
@@ -55,8 +57,9 @@ const PixiParticles: React.FC<PixiParticlesProps> = ({ children, config, ...prop
   useEffect(() => {
     if (emitter) {
       emitter.update(elapsed * 0.001);
+      update();
     }
-  }, [emitter, frameId, elapsed]);
+  }, [emitter, frameId, elapsed, update]);
 
   return (
     <PropsContext.Provider value={propsContext}>
